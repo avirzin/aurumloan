@@ -20,6 +20,12 @@ AurumLoan is a smart contract-based simulation demonstrating how tokenized gold 
    - If repaid before the due date, the gold is returned to the borrower.
    - If the borrower defaults, the escrow contract transfers the gold to the lender.
 
+### Use case diagram
+
+### Sequence diagram
+
+### Class diagram
+
 ## Technology Stack
 - **Smart Contracts**: Solidity, Hardhat
 - **Blockchain Network**: Ethereum Testnet (Alchemy RPC)
@@ -71,5 +77,5 @@ AurumLoan is a smart contract-based simulation demonstrating how tokenized gold 
     ```
 
 
-## Licens
+## License
 This project is licensed under the [MIT License](./LICENSE)
