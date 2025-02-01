@@ -1,0 +1,60 @@
+# Node.js dependencies
+node_modules/
+package-lock.json
+yarn.lock
+
+# Hardhat & Foundry (Smart Contract Development)
+cache/
+artifacts/
+typechain/
+coverage/
+dist/
+
+# Environment Variables
+.env
+.env.local
+.env.development
+.env.production
+
+# Logs & Debugging Files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+hardhat.log
+debug.log
+
+# Hardhat Node Artifacts
+test-cache/
+*.t.sol
+
+# VSCode & Editor Config Files
+.vscode/
+*.swp
+*.swo
+*.sublime-workspace
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Build output (React Front-End)
+frontend/node_modules/
+frontend/build/
+frontend/.next/
+frontend/out/
+
+# Dependency Lock Files
+frontend/package-lock.json
+frontend/yarn.lock
+
+# IPFS & Temporary Uploads (if any)
+.ipfs/
+uploads/
+
+# Coverage reports (if using solidity-coverage)
+coverage/
+coverage.json
+
+# Miscellaneous
+*.log
+*.tmp
