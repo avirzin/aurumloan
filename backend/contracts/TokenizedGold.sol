@@ -1,0 +1,15 @@
+pragma solidity ^0.8.19;
+
+import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
+import "@openzeppelin/contracts/access/Ownable.sol";
+
+// TokenizedGold.sol - ERC-20 token representing tokenized gold
+contract TokenizedGold is ERC20, Ownable {
+    constructor() ERC20("Tokenized Gold", "tGOLD") {
+        _mint(msg.sender, 1000000 * 10 ** decimals()); // Initial supply
+    }
+
+    function mint(address to, uint256 amount) external onlyOwner {
+        _mint(to, amount);
+    }
+}
