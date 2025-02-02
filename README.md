@@ -22,6 +22,8 @@ AurumLoan is a smart contract-based simulation demonstrating how tokenized gold 
 
 ### Use case diagram
 
+![image](./images/aurum_use_case.jpg)
+
 ### Sequence diagram
 
 ### Class diagram
