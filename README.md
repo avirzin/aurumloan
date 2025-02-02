@@ -20,6 +20,14 @@ AurumLoan is a smart contract-based simulation demonstrating how tokenized gold 
    - If repaid before the due date, the gold is returned to the borrower.
    - If the borrower defaults, the escrow contract transfers the gold to the lender.
 
+## Out of Scope
+To keep the project **simplified and focused on the core functionality**, the following aspects will **not** be included in the initial implementation:
+
+- **Loan Interest Calculation**: The loan system will not include interest accrual mechanisms; loans will be issued and repaid at face value.
+- **Lender Evaluation Process**: The lender will **always accept** the loan request without performing credit evaluations or risk assessments.
+
+These exclusions allow for a **streamlined proof-of-concept** implementation while maintaining clarity in the loan lifecycle and smart contract interactions.
+
 ### Use case diagram
 
 ![image](./images/aurum_use_case.jpg)
