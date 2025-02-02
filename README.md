@@ -54,27 +54,31 @@ AurumLoan is a smart contract-based simulation demonstrating how tokenized gold 
 
 ## Deployment & Testing
 1. Clone the repository:
-```
+ 
+   ```
    git clone https://github.com/yourusername/AurumLoan.git
    cd AurumLoan
-```
+   ```
 
 2. Install the dependencies:
+ 
    ```sh
    cd backend && npm install
    cd ../frontend && npm install
    ```
 
 3. Deploy smart contracts:
+ 
    ```sh
    npx hardhat run scripts/deploy.js --network sepolia
    ```
 
 4. Start the front-end:
-    ```sh
-    cd frontend
-    npm start
-    ```
+ 
+   ```sh
+   cd frontend
+   npm start
+   ```
 
 
 ## License
