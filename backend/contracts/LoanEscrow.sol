@@ -2,7 +2,16 @@ pragma solidity ^0.8.19;
 
 import "@openzeppelin/contracts/access/Ownable.sol";
 
-// LoanEscrow.sol - Handles loan collateralization, issuance, and execution
+/**
+ * @title  LoanEscrow
+ * @dev    This contract facilitates collateralized lending using tokenized gold as collateral. 
+ *         It allows users to request loans by locking tokenized gold, receive tokenized money (loan),
+ *         repay their loans to reclaim collateral, and enforces collateral execution in case of default. 
+ * @notice Users can lock tokenized gold as collateral to borrow tokenized money (ERC-20). 
+ *         If the loan is repaid, the gold is returned; otherwise, it is transferred to the lender.
+ */
+
+
 contract LoanEscrow is Ownable {
     IERC20 public tokenizedGold;
     IERC20 public tokenizedMoney;
