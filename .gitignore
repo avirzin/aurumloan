@@ -58,3 +58,9 @@ coverage.json
 # Miscellaneous
 *.log
 *.tmp
+
+# Docker-related files
+.dockerignore
+docker-compose.override.yml
+node_modules/
+build/
