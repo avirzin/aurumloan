@@ -65,9 +65,9 @@ cd AurumLoan
 docker-compose up --build
 ```
 This will:
-✅ Start a **Hardhat Node** for local blockchain testing (**port 8545**).
-✅ Deploy **TokenizedGold, TokenizedMoney, and LoanEscrow** contracts.
-✅ Start the **React frontend** for interaction (**port 3000**).
+- Start a **Hardhat Node** for local blockchain testing (**port 8545**).
+- Deploy **TokenizedGold, TokenizedMoney, and LoanEscrow** contracts.
+- Start the **React frontend** for interaction (**port 3000**).
 
 > 💡 **Note:** Contract addresses will be displayed in the terminal upon deployment.
 
@@ -77,10 +77,10 @@ Once contracts are deployed, simulate the loan lifecycle using the **pre-built H
 docker exec -it aurumloan_backend npx hardhat run scripts/useCase.js --network localhost
 ```
 This script will:
-✅ Mint **TokenizedGold (tGOLD) and TokenizedMoney (tMONEY)**.
-✅ Transfer **tGOLD to the client** and **tMONEY to the lender**.
-✅ The **client requests a loan**, locking tGOLD in escrow.
-✅ Check balances to confirm transactions.
+- Mint **TokenizedGold (tGOLD) and TokenizedMoney (tMONEY)**.
+- Transfer **tGOLD to the client** and **tMONEY to the lender**.
+- The **client requests a loan**, locking tGOLD in escrow.
+- Check balances to confirm transactions.
 
 ### 4️⃣ Run Loan Repayment Test (Optional)
 To simulate **loan repayment**, run:
@@ -88,9 +88,9 @@ To simulate **loan repayment**, run:
 docker exec -it aurumloan_backend npx hardhat run scripts/repayLoan.js --network localhost
 ```
 This script will:
-✅ Repay the loan using **tMONEY**.
-✅ Unlock **tGOLD** and return it to the client.
-✅ Check balances to confirm repayment.
+- Repay the loan using **tMONEY**.
+- Unlock **tGOLD** and return it to the client.
+- Check balances to confirm repayment.
 
 ### 5️⃣ Stop and Clean Up
 To stop the containers:
