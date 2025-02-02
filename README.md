@@ -42,14 +42,17 @@ AurumLoan is a smart contract-based simulation demonstrating how tokenized gold 
 │   ├── /contracts      # Solidity smart contracts
 │   ├── /scripts        # Deployment scripts
 │   ├── /test           # Smart contract tests
+│   ├── Dockerfile      # Dockerfile for backend
 │── /frontend
 │   ├── /src
 │   │   ├── /components # React UI components
 │   │   ├── /pages      # Loan request, repayment UI
 │   │   ├── /hooks      # Blockchain interactions
+│   │   ├── Dockerfile  # Dockerfile for frontend     
 │── /deployments        # Deployed contract addresses
 │── .env                # Environment variables
 │── README.md           # Project documentation
+│── docker-compose.yml  # Docker Compose file
 ```
 
 ## Deployment & Testing
