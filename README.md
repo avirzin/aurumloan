@@ -53,32 +53,56 @@ AurumLoan is a smart contract-based simulation demonstrating how tokenized gold 
 ```
 
 ## Deployment & Testing
-1. Clone the repository:
- 
-   ```
-   git clone https://github.com/yourusername/AurumLoan.git
-   cd AurumLoan
-   ```
 
-2. Install the dependencies:
- 
-   ```sh
-   cd backend && npm install
-   cd ../frontend && npm install
-   ```
+### 1️⃣ Clone the Repository
+```sh
+git clone https://github.com/yourusername/AurumLoan.git
+cd AurumLoan
+```
 
-3. Deploy smart contracts:
- 
-   ```sh
-   npx hardhat run scripts/deploy.js --network sepolia
-   ```
+### 2️⃣ Build and Start Docker Containers
+```sh
+docker-compose up --build
+```
+This will:
+✅ Start a **Hardhat Node** for local blockchain testing (**port 8545**).
+✅ Deploy **TokenizedGold, TokenizedMoney, and LoanEscrow** contracts.
+✅ Start the **React frontend** for interaction (**port 3000**).
 
-4. Start the front-end:
- 
-   ```sh
-   cd frontend
-   npm start
-   ```
+> 💡 **Note:** Contract addresses will be displayed in the terminal upon deployment.
+
+### 3️⃣ Run Loan Use Case (Requesting a Loan)
+Once contracts are deployed, simulate the loan lifecycle using the **pre-built Hardhat script** inside the running container:
+```sh
+docker exec -it aurumloan_backend npx hardhat run scripts/useCase.js --network localhost
+```
+This script will:
+✅ Mint **TokenizedGold (tGOLD) and TokenizedMoney (tMONEY)**.
+✅ Transfer **tGOLD to the client** and **tMONEY to the lender**.
+✅ The **client requests a loan**, locking tGOLD in escrow.
+✅ Check balances to confirm transactions.
+
+### 4️⃣ Run Loan Repayment Test (Optional)
+To simulate **loan repayment**, run:
+```sh
+docker exec -it aurumloan_backend npx hardhat run scripts/repayLoan.js --network localhost
+```
+This script will:
+✅ Repay the loan using **tMONEY**.
+✅ Unlock **tGOLD** and return it to the client.
+✅ Check balances to confirm repayment.
+
+### 5️⃣ Stop and Clean Up
+To stop the containers:
+```sh
+docker-compose down
+```
+This **removes** all running containers but **keeps contract data**.
+
+To remove **everything** (including contract states):
+```sh
+docker-compose down -v
+```
 
 
 ## License
