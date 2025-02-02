@@ -57,13 +57,13 @@ AurumLoan is a smart contract-based simulation demonstrating how tokenized gold 
 
 ## Deployment & Testing
 
-### 1️⃣ Clone the Repository
+### Clone the Repository
 ```sh
 git clone https://github.com/yourusername/AurumLoan.git
 cd AurumLoan
 ```
 
-### 2️⃣ Build and Start Docker Containers
+### Build and Start Docker Containers
 ```sh
 docker-compose up --build
 ```
@@ -74,7 +74,7 @@ This will:
 
 > 💡 **Note:** Contract addresses will be displayed in the terminal upon deployment.
 
-### 3️⃣ Run Loan Use Case (Requesting a Loan)
+### Run Loan Use Case (Requesting a Loan)
 Once contracts are deployed, simulate the loan lifecycle using the **pre-built Hardhat script** inside the running container:
 ```sh
 docker exec -it aurumloan_backend npx hardhat run scripts/useCase.js --network localhost
@@ -85,7 +85,7 @@ This script will:
 - The **client requests a loan**, locking tGOLD in escrow.
 - Check balances to confirm transactions.
 
-### 4️⃣ Run Loan Repayment Test (Optional)
+### Run Loan Repayment Test (Optional)
 To simulate **loan repayment**, run:
 ```sh
 docker exec -it aurumloan_backend npx hardhat run scripts/repayLoan.js --network localhost
@@ -95,7 +95,7 @@ This script will:
 - Unlock **tGOLD** and return it to the client.
 - Check balances to confirm repayment.
 
-### 5️⃣ Stop and Clean Up
+### Stop and Clean Up
 To stop the containers:
 ```sh
 docker-compose down
