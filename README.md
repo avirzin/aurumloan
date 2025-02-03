@@ -90,9 +90,9 @@ Once contracts are deployed, simulate the loan lifecycle using the **pre-built H
 docker exec -it aurumloan_backend npx hardhat run scripts/useCase.js --network localhost
 ```
 This script will:
-- Mint **TokenizedGold (tGOLD) and TokenizedMoney (tMONEY)**.
-- Transfer **tGOLD to the client** and **tMONEY to the lender**.
-- The **client requests a loan**, locking tGOLD in escrow.
+- Mint **TokenizedGold (tGLD) and TokenizedMoney (tMNY)**.
+- Transfer **tGLD to the client** and **tMNY to the lender**.
+- The **client requests a loan**, locking tGLD in escrow.
 - Check balances to confirm transactions.
 
 ### Run Loan Repayment Test (Optional)
@@ -101,8 +101,8 @@ To simulate **loan repayment**, run:
 docker exec -it aurumloan_backend npx hardhat run scripts/repayLoan.js --network localhost
 ```
 This script will:
-- Repay the loan using **tMONEY**.
-- Unlock **tGOLD** and return it to the client.
+- Repay the loan using **tMNY**.
+- Unlock **tGLD** and return it to the client.
 - Check balances to confirm repayment.
 
 ### Stop and Clean Up
