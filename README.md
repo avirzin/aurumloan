@@ -1,4 +1,4 @@
-<img src="./images/aurum_bar.png" alt="bernie logo" width="100"/>
+<img src="./images/aurum_bar.png" alt="gold bar" width="100"/>
 
 # Aurum Loan
 

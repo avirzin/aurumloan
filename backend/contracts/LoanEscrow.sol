@@ -13,6 +13,7 @@ contract LoanEscrow is Ownable {
     IERC20 public tokenizedGold;  // Reference to external TokenizedGold contract
     IERC20 public tokenizedMoney; // Reference to external TokenizedMoney contract
 
+    //Loan Struct
     struct Loan {
         address borrower;
         uint256 goldCollateral;
