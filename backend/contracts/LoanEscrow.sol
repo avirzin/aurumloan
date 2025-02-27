@@ -34,7 +34,7 @@ contract LoanEscrow is Ownable {
      * @param _tokenizedGold Address of the TokenizedGold contract
      * @param _tokenizedMoney Address of the TokenizedMoney contract
      */
-    constructor(address _tokenizedGold, address _tokenizedMoney) {
+    constructor(address _tokenizedGold, address _tokenizedMoney) Ownable(msg.sender) {
         tokenizedGold = IERC20(_tokenizedGold);
         tokenizedMoney = IERC20(_tokenizedMoney);
     }
